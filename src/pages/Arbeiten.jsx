@@ -39,7 +39,7 @@ const Arbeiten = () => {
           >
             ALLE ARBEITEN
           </button>
-          <div className="flex gap-3">
+          <div className="flex gap-4">
             <button
               onClick={e => setCategory('corporateDesign')}
               className="btn-primary"
@@ -61,7 +61,7 @@ const Arbeiten = () => {
           >
             WEBDESIGN
           </button>
-          <div className="flex flex-cols lg:flex-row">
+          <div className="flex flex-cols gap-4 lg:flex-row">
             <button
               onClick={e => setCategory('logoDesign')}
               className="btn-primary"
