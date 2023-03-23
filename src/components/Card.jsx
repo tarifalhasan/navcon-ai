@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom';
 const Card = ({ img, name, name2, id }) => {
   return (
     <div className="w-full">
-      <Link to={`${id}`}>
-        <img
-          src={img}
-          className="block w-full object-cover mx-auto"
-          alt={name}
-        />
-      </Link>
+      <div className="relative  overflow-hidden bg-cover bg-no-repeat">
+        <Link to={`${id}`}>
+          <img
+            src={img}
+            className="block transition duration-300 ease-in-out hover:scale-110 w-full object-cover mx-auto"
+            alt={name}
+          />
+        </Link>
+      </div>
       <div className="text-xl lg:text-3xl pt-3">
         <h2 className=" font-body text-center">{name}</h2>
         <Link to={`${id}`}>

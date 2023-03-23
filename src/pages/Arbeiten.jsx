@@ -3,6 +3,8 @@ import { arbeiten } from '../data';
 import Card from '../components/Card';
 const Arbeiten = () => {
   const [category, setCategory] = useState('allArbeiten');
+  const [selectedButton, setSelectedButton] = useState(null);
+
   console.log(category);
   const filterArry = arbeiten.filter(
     arbeiten => arbeiten.category === category
@@ -34,21 +36,36 @@ const Arbeiten = () => {
       <div className=" px-5 py-10 space-y-3 ">
         <div className="tabs_btn flex-col lg:flex-row  flex justify-center gap-4  items-center">
           <button
-            onClick={e => setCategory('allArbeiten')}
-            className="btn-primary"
+            onClick={e => {
+              setCategory('allArbeiten');
+              setSelectedButton('allArbeiten');
+            }}
+            className={`btn-primary ${
+              selectedButton === 'allArbeiten' ? 'selected' : ''
+            }`}
           >
             ALLE ARBEITEN
           </button>
           <div className="flex gap-4">
             <button
-              onClick={e => setCategory('corporateDesign')}
-              className="btn-primary"
+              onClick={e => {
+                setCategory('corporateDesign');
+                setSelectedButton('corporateDesign');
+              }}
+              className={`btn-primary ${
+                selectedButton === 'corporateDesign' ? 'selected' : ''
+              }`}
             >
               CORPORATE DESIGN
             </button>
             <button
-              onClick={e => setCategory('printDesign')}
-              className="btn-primary"
+              onClick={e => {
+                setCategory('printDesign');
+                setSelectedButton('printDesign');
+              }}
+              className={`btn-primary ${
+                selectedButton === 'printDesign' ? 'selected' : ''
+              }`}
             >
               PRINTDESIGN
             </button>
@@ -56,21 +73,36 @@ const Arbeiten = () => {
         </div>
         <div className="tabs_btn px-40 flex flex-col lg:flex-row lg:justify-center gap-4  items-center">
           <button
-            onClick={e => setCategory('webDesign')}
-            className="btn-primary"
+            onClick={e => {
+              setSelectedButton('webDesign');
+              setCategory('webDesign');
+            }}
+            className={`btn-primary ${
+              selectedButton === 'webDesign' ? 'selected' : ''
+            }`}
           >
             WEBDESIGN
           </button>
           <div className="flex flex-cols gap-4 lg:flex-row">
             <button
-              onClick={e => setCategory('logoDesign')}
-              className="btn-primary"
+              onClick={e => {
+                setSelectedButton('logoDesign');
+                setCategory('logoDesign');
+              }}
+              className={`btn-primary ${
+                selectedButton === 'logoDesign' ? 'selected' : ''
+              }`}
             >
               LOGODESIGN
             </button>
             <button
-              className="btn-primary"
-              onClick={e => setCategory('weiteres')}
+              className={`btn-primary ${
+                selectedButton === 'weiteres' ? 'selected' : ''
+              }`}
+              onClick={e => {
+                setSelectedButton('weiteres');
+                setCategory('weiteres');
+              }}
             >
               WEITERES
             </button>

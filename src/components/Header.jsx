@@ -34,7 +34,11 @@ const Header = () => {
         } transition transform overflow-y-hidden z-40  ease-in delay-300 top-0 w-full h-screen text-white bg-[#000000]`}
       >
         <div className="flex py-5 container justify-between items-center">
-          <h2 className="text-xl">LOGO</h2>
+          <Link to={'/'}>
+            <h2 onClick={() => handler()} className="text-xl">
+              LOGO
+            </h2>
+          </Link>
           <button onClick={() => handler()}>
             <svg
               width="43"
@@ -53,7 +57,7 @@ const Header = () => {
         </div>
         <div className="links  container mt-[18%] flex items-end justify-between">
           <div className="flex text-center lg:text-right w-full justify-between items-end">
-            <ul className=" block font-Fontspring  space-y-4 text-8xl">
+            <ul className=" block nav-link  space-y-4 text-3xl lg:text-8xl">
               <li onClick={() => handler()}>
                 <NavLink activeClassName="active" to="/">
                   Home

@@ -1,19 +1,50 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
+  const animationVariants = {
+    hover: {
+      scale: 1.2,
+    },
+    exit: {
+      opacity: 0,
+      x: 50,
+    },
+    enter: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
+  const transition = {
+    type: 'tween',
+    ease: 'easeOut',
+    duration: 0.6,
+  };
+
   return (
     <div className="container w-[60%] mx-auto">
       <div className="text-4xl  space-y-3 texter lg:text-8xl font-neueMedium">
-        <h2
-          className="text-center pr-7"
-          data-aos="fade-left"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in"
+        <motion.div
+          variants={animationVariants}
+          whileHover="hover"
+          initial="exit"
+          animate="enter"
+          exit="exit"
+          transition={transition}
         >
-          BLICK
-        </h2>
+          <h2
+            className="text-center pr-7"
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in"
+          >
+            BLICK
+          </h2>
+        </motion.div>
+
         <h2
           data-aos="fade-left"
           data-aos-delay="50"
