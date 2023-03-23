@@ -55,13 +55,19 @@ const Header = () => {
           <div className="flex text-center lg:text-right w-full justify-between items-end">
             <ul className=" block font-Fontspring  space-y-4 text-8xl">
               <li onClick={() => handler()}>
-                <NavLink to="/">Home</NavLink>
+                <NavLink activeClassName="active" to="/">
+                  Home
+                </NavLink>
               </li>
               <li onClick={() => handler()}>
-                <NavLink to="/arbeiten">Arbeiten</NavLink>
+                <NavLink activeClassName="active" to="/arbeiten">
+                  Arbeiten
+                </NavLink>
               </li>
               <li onClick={() => handler()}>
-                <NavLink to="/kontakt">Kontakt</NavLink>
+                <NavLink activeClassName="active" to="/kontakt">
+                  Kontakt
+                </NavLink>
               </li>
             </ul>
             <div className="hidden lg:block">
