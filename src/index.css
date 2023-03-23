@@ -29,7 +29,7 @@
   font-style: normal;
 }
 
-. @layer base {
+@layer base {
   body {
     @apply font-body text-[16px] overflow-x-hidden;
   }

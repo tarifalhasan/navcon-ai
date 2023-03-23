@@ -16,7 +16,7 @@ const Slide = () => {
 
     autoplayTimeout: 855500,
     smartSpeed: 450,
-    // nav: true,
+    nav: true,
     responsive: {
       0: {
         items: 1,

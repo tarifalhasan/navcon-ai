@@ -23,7 +23,7 @@ const ArbeitenDetails = () => {
               strokeWidth="2.3121"
             />
           </svg>
-          <span>{getArbeiTen?.name}</span>
+          <span>Zurück zu übersicht</span>
         </div>
       </Link>
       <div>
