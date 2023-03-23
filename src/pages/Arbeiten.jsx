@@ -31,7 +31,7 @@ const Arbeiten = () => {
           ARBEITEN
         </h2>
       </div>
-      <div className=" py-10 space-y-3 ">
+      <div className=" px-5 py-10 space-y-3 ">
         <div className="tabs_btn flex-col lg:flex-row  flex justify-center gap-4  items-center">
           <button
             onClick={e => setCategory('allArbeiten')}
@@ -54,7 +54,7 @@ const Arbeiten = () => {
             </button>
           </div>
         </div>
-        <div className="tabs_btn px-40 flex justify-center gap-4  items-center">
+        <div className="tabs_btn px-40 flex flex-col lg:flex-row lg:justify-center gap-4  items-center">
           <button
             onClick={e => setCategory('webDesign')}
             className="btn-primary"
