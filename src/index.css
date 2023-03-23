@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* face font */
+@font-face {
+  font-family: 'NeueHaasDisplayMedium';
+  src: url('./assets/fonts/NeueHaasDisplay-Roman.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NeueHaasDisplayLight';
+  src: url('./assets/fonts/NeueHaasDisplayLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NeueHaasDisplayBold';
+  src: url('./assets/fonts/NeueHaasDisplayBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fontspring';
+  src: url('./assets/fonts/Fontspring-DEMO-theseasons-reg.otf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply font-body text-[16px] overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply text-lg font-neueLight font-medium text-black border-2 border-black px-3 py-0.5;
+  }
+  .container {
+    @apply mx-auto;
+  }
+}

@@ -1,0 +1,108 @@
+.shadow-effect {
+  /* background: #fff; */
+  padding: 60px;
+  border-radius: 4px;
+  text-align: left !important;
+  border: 1px solid #ececec;
+}
+.owl-item.active.center {
+  -webkit-box-shadow: 1px 1px 20px 5px rgb(0 0 0 / 12%);
+  box-shadow: 1px 1px 20px 5px rgb(0 0 0 / 5%);
+  padding: 12px;
+}
+#shadow-effect p {
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 17px 0;
+  font-weight: 300;
+}
+.img-circle {
+  border-radius: 50%;
+
+  max-width: 70px;
+  min-height: 70px;
+  transform-style: preserve-3d;
+}
+#customer-testimonoals {
+  margin-top: 6%;
+}
+
+#customer-testimonoals .item {
+  text-align: left !important;
+
+  margin-bottom: 0px;
+  opacity: 0.9;
+  transform: scale3d(0.8, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+}
+#customer-testimonoals .owl-item.active.center .item {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+.owl-theme {
+  position: relative;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #8c00ff;
+  transform: translate3d(0px, -50%, 0px) scale(0.8);
+}
+.owl-carousel .owl-dots {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+  padding-top: 4.2rem;
+}
+.owl-carousel .owl-dots .owl-dot span {
+  background: #c5c5c5;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px 5px;
+  transform: translate3d(0px, -50%, 0px) scale(0.3);
+  transform-origin: 50% 50% 0;
+  transition: all 250ms ease-out 0s;
+}
+.owl-nav {
+  position: absolute;
+  left: 0 revert;
+  left: 0;
+  right: 0;
+  width: 70%;
+  margin: 0 auto;
+  top: 20%;
+  display: flex;
+  justify-content: space-between;
+  gap: 142px;
+}
+.owl-nav > button:hover {
+  background-color: transparent !important;
+}
+.owl-nav > button > span {
+  font-size: 105px;
+  color: #ffff;
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+.owl-carousel .owl-dots {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.owl-theme .owl-nav {
+  margin-top: 20px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+div#customer-testimonoals {
+  z-index: 10;
+}
