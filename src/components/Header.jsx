@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white  sticky z-50 py-2 top-0">
+    <header className="bg-white mb-10  sticky z-50 py-2 top-0">
       <div className="flex py-5  container justify-between items-center">
         <Link to={'/'}>
           <h2 className="text-xl">LOGO</h2>
