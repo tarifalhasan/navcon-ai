@@ -17,14 +17,14 @@ const App = () => {
     });
   }, []);
   return (
-    <Layout>
+    <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/arbeiten" element={<Arbeiten />} />
         <Route path="arbeiten/:arbeitenId" element={<ArbeitenDetails />} />
         <Route path="kontakt" element={<Kontakt />} />
       </Routes>
-    </Layout>
+    </>
   );
 };
 

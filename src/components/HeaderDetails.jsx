@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header2 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handler = () => {
@@ -9,10 +9,28 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white mb-10  sticky z-50 py-2 top-0">
+    <header className="bg-white mb-10  sticky z-50  top-0">
       <div className="flex py-5  container justify-between items-center">
         <Link to={'/'}>
           <h2 className="text-xl">LOGO</h2>
+          <Link to={'/arbeiten'}>
+            <div className="flex items-center gap-2">
+              <svg
+                width="10"
+                height="27"
+                viewBox="0 0 16 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.293 25.4424L1.99913 13.1485L14.293 0.854714"
+                  stroke="black"
+                  strokeWidth="2.3121"
+                />
+              </svg>
+              <span>Zurück zu übersicht</span>
+            </div>
+          </Link>
         </Link>
         <button onClick={() => handler()}>
           <svg
@@ -148,4 +166,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;
