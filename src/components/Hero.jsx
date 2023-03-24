@@ -97,7 +97,15 @@ const Hero = () => {
         </motion.h2>
       </motion.div>
       <div>
-        <button className="animate-bounce mt-10 w-[65px] mx-auto block">
+        <button
+          onClick={() =>
+            window.scrollTo({
+              top: window.innerHeight,
+              behavior: 'smooth',
+            })
+          }
+          className="animate-bounce mt-10 w-[65px] mx-auto block"
+        >
           <img src="/arrowdown.png" className="w-[80%]" alt="" />
         </button>
       </div>
