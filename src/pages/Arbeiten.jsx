@@ -1,38 +1,70 @@
 import React, { useState } from 'react';
 import { arbeiten } from '../data';
 import Card from '../components/Card';
+import { motion } from 'framer-motion';
 const Arbeiten = () => {
   const [category, setCategory] = useState('allArbeiten');
-  const [selectedButton, setSelectedButton] = useState(null);
+  const [selectedButton, setSelectedButton] = useState('allArbeiten');
 
-  console.log(category);
   const filterArry = arbeiten.filter(
     arbeiten => arbeiten.category === category
   );
+  // Farmer motion
+  const animationVariants = {
+    hover: {
+      translateX: 80,
+    },
+    exit: {
+      opacity: 0,
+      x: 50,
+    },
+    enter: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+  const animationVariants2 = {
+    hover: {
+      translateX: -450,
+    },
+    exit: {
+      opacity: 0,
+      x: 50,
+    },
+    enter: {
+      opacity: 1,
+      x: 0,
+    },
+  };
 
+  const transition = {
+    type: 'tween',
+    ease: 'easeOut',
+    duration: 0.6,
+  };
   return (
     <section className="container">
-      <div className="text-4xl py-16  space-y-3 texter lg:text-8xl font-neueMedium">
-        <h2
-          className="text-center pr-7"
-          data-aos="fade-left"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in"
+      <motion.div
+        whileHover="hover"
+        initial="exit"
+        animate="enter"
+        exit="exit"
+        transition={transition}
+        className="text-4xl py-16  space-y-3 texter lg:text-8xl font-neueMedium"
+      >
+        <motion.div
+          transition={transition}
+          className=""
+          variants={animationVariants}
         >
-          MEINE
-        </h2>
-        <h2
-          data-aos="fade-left"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in"
-          className="ml-[40%] font-Fontspring text-center"
-        >
-          ARBEITEN
-        </h2>
-      </div>
+          <h2 className="text-center pr-7">MEINE</h2>
+        </motion.div>
+
+        <motion.div transition={transition} variants={animationVariants2}>
+          <h2 className="ml-[40%] font-Fontspring text-center">ARBEITEN</h2>
+        </motion.div>
+      </motion.div>
+
       <div className=" px-5 py-10 space-y-3 ">
         <div className="tabs_btn flex-col lg:flex-row  flex justify-center gap-4  items-center">
           <button

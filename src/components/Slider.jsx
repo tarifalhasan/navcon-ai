@@ -77,9 +77,11 @@ const Slide = () => {
               </div>
             </OwlCarousel>
           </div>
-          <button className="btn-primary block mx-auto font-body px-5 py-2">
-            ALLE ARBEITEN
-          </button>
+          <Link to={'arbeiten'}>
+            <button className="btn-primary block mx-auto font-body px-5 py-2">
+              ALLE ARBEITEN
+            </button>
+          </Link>
         </div>
       </div>
     </section>
