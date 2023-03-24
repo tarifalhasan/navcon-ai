@@ -107,7 +107,7 @@ const Header2 = () => {
       </nav>
       <nav
         className={`absolute  lg:hidden  ${
-          isOpen ? '  translate-x-0' : '  -translate-x-full '
+          isOpen ? '  translate-x-0' : '  translate-x-full '
         } transition  overflow-y-hidden z-40  ease-in delay-300 top-0 w-full h-screen text-white bg-[#000000]`}
       >
         <div className="flex py-5 container justify-between items-center">
