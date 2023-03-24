@@ -89,8 +89,8 @@ const Home = () => {
                     <h2 className="text-right ">STECKT</h2>
                   </motion.div>
                 </motion.div>
-                <div></div>
-                <div className="flex justify-center">
+
+                <div className=" hidden lg:flex  justify-center">
                   <Link to={'kontakt'}>
                     <button className="btn-primary text-lg px-8 font-body">
                       Kontakt
@@ -104,6 +104,13 @@ const Home = () => {
                   className="h-[460px] max-w-[550px] object-cover"
                   alt=""
                 />
+              </div>
+              <div className="  lg:hidden pb-10 justify-center">
+                <Link to={'kontakt'}>
+                  <button className="btn-primary text-lg px-8 font-body">
+                    Kontakt
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
